@@ -1,3 +1,7 @@
 .text-muted {
   color: #767676
 }
+
+.nav-pills>li.active>a {
+  background-color: #767676
+}
