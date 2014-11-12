@@ -18,6 +18,10 @@
   font-size: 28px;
 }
 
+.plan.standard {
+  margin-top: 40px;
+}
+
 .plan {
   box-shadow: 0 2px 2px rgba(10, 10, 10, 0.06);
   min-height: 100px;
