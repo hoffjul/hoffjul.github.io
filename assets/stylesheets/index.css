@@ -27,3 +27,15 @@
   padding-bottom: 25px;
   text-align: center;
 }
+
+.plan ul {
+  list-style-type: none;
+  padding: 20px;
+  margin-top: 2px;
+}
+
+.plan .price {
+  border-top: 1px solid #eee;
+  margin: 0 auto 30px auto;
+  width: 80%;
+}
