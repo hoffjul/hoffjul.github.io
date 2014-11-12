@@ -5,3 +5,7 @@
 .nav-pills>li.active>a {
   background-color: #767676
 }
+
+.nav.nav-pills {
+  color: #767676;
+}
