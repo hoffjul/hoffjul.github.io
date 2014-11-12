@@ -9,3 +9,11 @@
 .nav.nav-pills a {
   color: #767676;
 }
+
+.booking img {
+  width: 280px;
+}
+
+.booking h2 {
+  font-size: 28px;
+}
