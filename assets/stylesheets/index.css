@@ -19,7 +19,7 @@
 }
 
 .plan.standard {
-  margin-top: 40px;
+  margin-top: 50px;
 }
 
 .plan {
@@ -51,11 +51,20 @@
   line-height: 1;
 }
 
+.plan.standard .head {
+  background: #f3f5f7;
+  border: 1px solid #f3f5f7;
+  color: #555;
+}
+
+.plan.premium .head {
+  background: #ffc500;
+  border: 1px solid #ffc500;
+  color: #fff;
+}
+
 .plan .head {
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
   padding: 3px 16px;
-  background: #767676;
-  color: #fff;
-  border: 1px solid #767676;
 }
