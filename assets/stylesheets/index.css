@@ -78,12 +78,13 @@
   color: #fff !important;
 }
 
-#saveForm {
+input#saveForm {
   padding: 10px 16px;
   font-size: 18px;
   line-height: 1.33;
   border-radius: 6px;
   background-color: #5cb85c;
   border-color: #4cae4c;
+  color: #fff;
 }
 
