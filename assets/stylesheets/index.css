@@ -72,3 +72,7 @@
 #wuf-adv {
   display: none !important;
 }
+
+#form1 a {
+  display: none !important;
+}
