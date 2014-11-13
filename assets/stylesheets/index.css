@@ -68,3 +68,7 @@
   border-top-right-radius: 4px;
   padding: 3px 16px;
 }
+
+#wuf-adv {
+  display: none;
+}
