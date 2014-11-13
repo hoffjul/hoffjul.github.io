@@ -70,5 +70,5 @@
 }
 
 #wuf-adv {
-  display: none;
+  display: none !important;
 }
