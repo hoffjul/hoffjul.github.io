@@ -2,7 +2,10 @@ h1 {
   font-size: 35px;  
 }
 
-/*logo*/
+h2 a {
+  color: #767676;
+}
+
 .text-muted {
   color: #767676;
 }
