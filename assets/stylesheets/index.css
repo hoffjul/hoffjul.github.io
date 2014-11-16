@@ -2,8 +2,14 @@ h1 {
   font-size: 35px;  
 }
 
+/*logo*/
 .text-muted {
-  color: #767676
+  font-size: 32px;
+  letter-spacing: -3px;
+  color: #767676;
+  font-family: 'Droid Sans' !important;
+  font-style: normal;
+  font-weight: 700;
 }
 
 .nav-pills>li.active>a {
