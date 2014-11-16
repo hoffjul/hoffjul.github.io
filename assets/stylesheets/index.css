@@ -3,7 +3,7 @@ h1 {
 }
 
 h2 a {
-  color: #767676;
+  color: #767676 !important;
 }
 
 .text-muted {
