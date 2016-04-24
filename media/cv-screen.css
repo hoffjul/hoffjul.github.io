@@ -162,8 +162,33 @@ a {
 }
 
 a:hover {
-	color:#39f
+/*  color:#39f*/
 }
+
+
+@media (min-width: 950px) {
+  #main {
+    width: 70%;
+  }
+  
+   /* breite Browserfenster */
+}
+
+@media and (max-width: 950px) {
+  #main {
+    width: 90%;
+  }
+  
+   /* Darstellung auf Netbooks */ 
+} 
+
+@media (max-width: 450px) {
+     /* mobile Geräte */ 
+     #main {
+       width: 100%;
+     }
+}
+     
 
 #webaddress {
 	margin-top: 0em;
