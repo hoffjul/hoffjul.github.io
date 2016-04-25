@@ -43,6 +43,7 @@ __Technical University of Berlin__ industrial engineering in communication and i
 __Korea University__ business school exchange program
 
 
+
 ## Technical skills
 
 * Ruby (on Rails)
