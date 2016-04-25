@@ -166,29 +166,27 @@ a:hover {
 }
 
 
-/*@media (min-width: 950px) {
+@media (min-width: 950px) {
   #main {
     width: 70%;
   }
+  
+   /* breite Browserfenster */
 }
-*/
 
-/*@media and (max-width: 950px) {
+@media and (max-width: 950px) {
   #main {
     width: 90%;
   }
-}
-*/  
+  
+   /* Darstellung auf Netbooks */ 
+} 
 
-/*@media (max-width: 450px) {
+@media (max-width: 450px) {
+     /* mobile Geräte */ 
      #main {
        width: 100%;
      }
-}
-*/
-
-#main {
-  width: 100%;
 }
      
 
