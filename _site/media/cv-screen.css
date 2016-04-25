@@ -165,28 +165,29 @@ a:hover {
 /*  color:#39f*/
 }
 
-
-@media (min-width: 950px) {
+/* breite Browserfenster */
+/*@media (min-width: 950px) {
   #main {
     width: 70%;
   }
-  
-   /* breite Browserfenster */
 }
-
-@media and (max-width: 950px) {
+*/
+/* Darstellung auf Netbooks */ 
+/*@media and (max-width: 950px) {
   #main {
     width: 90%;
   }
-  
-   /* Darstellung auf Netbooks */ 
-} 
-
-@media (max-width: 450px) {
-     /* mobile Geräte */ 
+}
+*/
+/* mobile Geräte */ 
+/*@media (max-width: 450px) {
      #main {
        width: 100%;
      }
+}
+*/
+#main {
+  width: 100%;
 }
      
 
