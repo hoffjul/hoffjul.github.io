@@ -1,6 +1,6 @@
 ---
 layout: cv
-title: Julian Hoffmann's CV
+title: Julian Hoffmann
 ---
 # Mr. Julian Hoffmann
 Cambridge Editing Group, CTO
@@ -26,21 +26,21 @@ __doxter GmbH__ co-founder, frontend development and marketing
 __Charité Universitätsmedizin Berlin__ doxter research project, backend and frontend development
 
 `2009-10` 
-__Tutorlist.kr__ Web platform for Korean students to practice English via video chat with native speakers
+__Tutorlist.kr__ platform for Korean students to practice English with native speakers via video chat
 
 `2007-8` 
-__Daimler AG__ Introduction and support of a document management system
+__Daimler AG__ introduction and support of a document management system
 
 `2005` 
-__Motorola Deutschland GmbH__ Quality assurance for radio set production
+__Motorola Deutschland GmbH__ quality assurance for radio set production
 
 ## Education
 
 `2003-9`
-__Technical University of Berlin__ Industrial engineering in communication and information systems
+__Technical University of Berlin__ industrial engineering in communication and information systems
 
 `2006-7`
-__Korea University__ Business School exchange program
+__Korea University__ business school exchange program
 
 
 ## Technical skills
