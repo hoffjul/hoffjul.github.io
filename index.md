@@ -16,11 +16,8 @@ Cambridge Editing Group, CTO
 
 ## Employment
 
-`2015-16` 
-__doxter GmbH__ head of marketing and support
-
-`2012-14` 
-__doxter GmbH__ co-founder, frontend development and marketing
+`2012-16` 
+__doxter GmbH__ co-founder, head of marketing and support, frontend development
 
 `2011-12` 
 __Charité Universitätsmedizin Berlin__ doxter research project, backend and frontend development
