@@ -7,6 +7,60 @@
 <title>Kundenumfrage</title>
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" media="all" rel="stylesheet" type="text/css" />
 <link href="http://mailgun.github.io/transactional-email-templates/styles.css" media="all" rel="stylesheet" type="text/css" />
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+
+<style>
+.spinner {
+  display: inline-block;
+  opacity: 0;
+  width: 0;
+
+  -webkit-transition: opacity 0.25s, width 0.25s;
+  -moz-transition: opacity 0.25s, width 0.25s;
+  -o-transition: opacity 0.25s, width 0.25s;
+  transition: opacity 0.25s, width 0.25s;
+}
+
+.has-spinner.active {
+  cursor:progress;
+}
+
+.has-spinner.active .spinner {
+  opacity: 1;
+  width: auto; /* This doesn't work, just fix for unkown width elements */
+}
+
+.has-spinner.btn-mini.active .spinner {
+  width: 10px;
+}
+
+.has-spinner.btn-small.active .spinner {
+  width: 13px;
+}
+
+.has-spinner.btn.active .spinner {
+  width: 16px;
+}
+
+.has-spinner.btn-large.active .spinner {
+  width: 19px;
+}
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.0/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js"></script>
+
+<script>
+$(function(){
+    $('a, button').click(function() {
+        $(this).toggleClass('active');
+    });
+});
+</script>
+
 </head>
 
 <body>
@@ -50,7 +104,10 @@
                         <input id="email" type="hidden" class="form-control" name="email" value="{{email}}">
                         <input id="lead_id" type="hidden" class="form-control" name="lead_id" value="{{lead_id}}">
                       </div>    
-                      <button type="submit" class="btn btn-success">Senden</button>
+                      <button type="submit" class="btn btn-success has-spinner">
+                         <span class="spinner"><i class="fa fa-refresh fa-spin fa-fw"></i></span>
+                        Senden
+                      </button>
                     </form>                    
                     
 									</td>
