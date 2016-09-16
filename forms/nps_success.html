@@ -4,9 +4,63 @@
 <head>
 <meta name="viewport" content="width=device-width" />
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>Thank you</title>
+<title>Kundenumfrage</title>
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" media="all" rel="stylesheet" type="text/css" />
 <link href="http://mailgun.github.io/transactional-email-templates/styles.css" media="all" rel="stylesheet" type="text/css" />
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+
+<style>
+.spinner {
+  display: inline-block;
+  opacity: 0;
+  width: 0;
+
+  -webkit-transition: opacity 0.25s, width 0.25s;
+  -moz-transition: opacity 0.25s, width 0.25s;
+  -o-transition: opacity 0.25s, width 0.25s;
+  transition: opacity 0.25s, width 0.25s;
+}
+
+.has-spinner.active {
+  cursor:progress;
+}
+
+.has-spinner.active .spinner {
+  opacity: 1;
+  width: auto; /* This doesn't work, just fix for unkown width elements */
+}
+
+.has-spinner.btn-mini.active .spinner {
+  width: 10px;
+}
+
+.has-spinner.btn-small.active .spinner {
+  width: 13px;
+}
+
+.has-spinner.btn.active .spinner {
+  width: 16px;
+}
+
+.has-spinner.btn-large.active .spinner {
+  width: 19px;
+}
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.0/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js"></script>
+
+<script>
+$(function(){
+    $('a, button').click(function() {
+        $(this).toggleClass('active');
+    });
+});
+</script>
+
+
 </head>
 
 <body>
@@ -29,8 +83,33 @@
 						<td class="content-wrap">
 							<table width="100%" cellpadding="0" cellspacing="0">
 								<tr>
-									<td class="alert alert-success" style="color:#3c763d">
+									<td class="content-block">
 										Vielen Dank für Ihr Feedback.
+									</td>
+								</tr>
+								<tr>
+									<td class="content-block">
+										Es freut uns, dass Sie mit doxter zufrieden sind. Im unteren Feld können Sie uns gerne Ihre Kollegen nennen, die an doxter interessiert sein könnten. Für jede Empfehlung, die zu einem Neukunden für uns führt, erhalten Sie eine 200 EUR Gutschrift auf Ihrer nächsten Monatsrechnung. 
+                    
+                    <br/>
+                    <br/>
+                    
+                    <form action="http://doxter.webscript.io/nps_feedback" method="post">
+                      <div class="form-group">                        
+                        <label for="exampleInputEmail1">Kollegen, denen Sie doxter empfehlen würden.</label>
+                        <textarea class="form-control" style="height:100px" id="feedback" name="feedback"></textarea>
+                      </div>
+                      <div class="form-group">
+                        <input id="name" type="hidden" class="form-control" name="name" value="{{name}}">
+                        <input id="email" type="hidden" class="form-control" name="email" value="{{email}}">
+                        <input id="lead_id" type="hidden" class="form-control" name="lead_id" value="{{lead_id}}">
+                      </div>    
+                      <button type="submit" class="btn btn-success has-spinner">
+                         <span class="spinner"><i class="fa fa-refresh fa-spin fa-fw"></i></span>
+                        Senden
+                      </button>
+                    </form>                    
+                    
 									</td>
 								</tr>
 								<tr>
