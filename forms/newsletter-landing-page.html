@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<!-- saved from url=(0036)http://www.doxter.de/praxismarketing -->
+
+<html lang="de">
+
+<head>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+
+  <title> doxter - Online-Terminbuchung für Ärzte, Zahnärzte und Therapeuten  </title>
+
+  <!-- Just for now, remove when landing pages are ready -->
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="">
+
+  <!-- Bootstrap 3 -->
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+
+  <!-- Mobile -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-61335677-1', 'auto');
+    ga('set', 'anonymizeIp', true);
+    ga('send', 'pageview');
+
+  </script>
+    
+
+  <style type="text/css">
+  
+    .navbar {
+      margin-bottom: 0;
+    }
+    
+    .wrap {
+      width: 100%;
+    }
+    
+    .subnav a {
+      font-size: 16px;
+      color: #0081b9;
+    }
+    .subnav {
+      border-top: 1px solid #ccc;
+      background-color: #f1f1f1;
+    }
+    
+    .product h1 {
+      color: #0081b9;
+    }
+    
+    .circle.green {
+      background: #5ba94c;
+    }
+    .circle.blue {
+      background: #0081b9;
+    }
+    .circle.red {
+      background: #e54d42;
+    }
+    .circle.brown {
+      background: #a86332;
+    }
+    .circle.yellow {
+      background: #f4d452;
+    }
+    .circle.pink {
+      background: #fe99b3;
+    }
+    .circle.purple {
+      background: #9d74b9;
+    }
+    .circle.orange {
+      background: #f77f0a;
+    }
+    .circle.gray {
+      background: #555;
+    }
+    
+    .circle.left {
+      float: left;
+      margin-right: 20px;
+    }
+    .circle.right {
+      float: right;
+      margin-left: 20px;
+    }
+    .circle {
+    	border-radius: 50%;
+    	width: 60px;
+    	height: 60px; 
+      position: relative;
+/*      display: inline;*/
+    }
+    .circle-text {
+      padding-top:5px;
+    }
+    
+    h4.circle-title {
+      margin-left: 78px;
+    }
+    
+    .pricing .glyphicon {
+      font-size: 20px;
+    }
+    
+    .glyphicon {
+      color: #fff;
+      font-size: 29px;
+      left: 16px;
+      top: 15px;
+      position: absolute;
+    }
+    
+    table.pricing {
+      margin-top: 80px;
+      border: 1px solid #ccc;
+    }
+    
+    table.pricing .header td.blank {
+      border-top: 1px solid white !important;
+      border-left: 1px solid white !important;
+      background: white !important;
+      font-size: 17px;
+    }
+    
+    table.pricing tr.header td {
+      border-top: 1px solid white !important;
+      border-left: 1px solid white !important;
+      border-right: 1px solid white !important;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+            
+    table.pricing tr.header {      
+      background-color: #0081b9;
+      color: #fff;
+    }
+    
+    table.pricing td.savings {
+/*      color: #5cb85c;*/
+      color: #e54d42;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    
+    table.pricing td .glyphicon {
+      color: #555!important;
+      position: static;
+    }
+      
+    table.pricing td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: center;
+    }
+    
+    table.pricing tr.action td {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+    
+    table.pricing td .discount span {
+      font-size: 30px;
+      line-height: 30px;
+      font-weight: bold;
+    }
+    table.pricing td .regular span {
+      font-size: 20px;
+      line-height: 30px;
+      font-weight: bold;
+    }
+    table.pricing td .regular {
+      margin-bottom: 10px;
+    }
+    
+    table.pricing td .discount {
+      color: #e54d42;
+      margin-top: 10px;
+    }
+    
+    table.pricing td.promotion {
+      background: #fff8d9;
+/*      color: #555;*/
+    }
+    
+    td.legend {
+      width: 13%;
+    }
+    
+    @media (min-width: 768px) {
+      .container {
+        max-width: 920px;
+      }
+    }
+    
+    
+    
+       /* The ribbons */
+
+    .corner-ribbon{
+      z-index: 999999;
+      width: 200px;
+      background: #e43;
+      position: absolute;
+      top: 25px;
+      left: -50px;
+      text-align: center;
+      line-height: 50px;
+      letter-spacing: 1px;
+      color: #f0f0f0;
+      transform: rotate(-45deg);
+      -webkit-transform: rotate(-45deg);
+    }
+
+    /* Custom styles */
+
+    .corner-ribbon.sticky{
+      position: fixed;
+    }
+
+    .corner-ribbon.shadow{
+      box-shadow: 0 0 3px rgba(0,0,0,.3);
+    }
+
+    /* Different positions */
+
+    .corner-ribbon.top-left{
+      top: 25px;
+      left: -50px;
+      transform: rotate(-45deg);
+      -webkit-transform: rotate(-45deg);
+    }
+
+    .corner-ribbon.top-right{
+      top: 25px;
+      right: -50px;
+      left: auto;
+      transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+    }
+
+    .corner-ribbon.bottom-left{
+      top: auto;
+      bottom: 25px;
+      left: -50px;
+      transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+    }
+
+    .corner-ribbon.bottom-right{
+      top: auto;
+      right: -50px;
+      bottom: 25px;
+      left: auto;
+      transform: rotate(-45deg);
+      -webkit-transform: rotate(-45deg);
+    }
+
+    /* Colors */
+
+    .corner-ribbon.white{background: #f0f0f0; color: #555;}
+    .corner-ribbon.black{background: #333;}
+    .corner-ribbon.grey{background: #999;}
+    .corner-ribbon.blue{background: #39d;}
+    .corner-ribbon.green{background: #2c7;}
+    .corner-ribbon.turquoise{background: #1b9;}
+    .corner-ribbon.purple{background: #95b;}
+    .corner-ribbon.red{background: #e43;}
+    .corner-ribbon.orange{background: #e82;}
+    .corner-ribbon.yellow{background: #ec0;}
+    .corner-ribbon.epikur{background: #f4d452;color:#333;}
+    .corner-ribbon.epikur a{color:#333;}
+
+    .help-block {font-size: 10px; padding-left:5px;}
+  </style>
+  
+
+
+  <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  
+  <script>
+  
+  $('a[href^="#"]').on('click', function(event) {
+      var target = $(this.href);
+      if( target.length ) {
+          event.preventDefault();
+          $('html, body').animate({
+              scrollTop: target.offset().top
+          }, 1000);
+      }
+  })
+  </script>
+  
+</head>
+
+<body class="self-signup">
+  
+  
+   
+  <!-- container 1 -->
+  
+  <header class="wrap navbar navbar-static-top">
+    <div class="container">
+      <div class="navbar-header">
+        <a href="http://www.doxter.de/"><img src="http://assets.doxter.de/images/shared/doxter-logo-2x.png" width="150px"></a>
+      </div>
+    </div>
+  </header>
+  <div class="wrap subnav">
+    <div class="container">
+      <div class="navbar-header" style="padding: 10px 0 10px 0">
+        <ul class="nav nav-pills pull-right">
+          <!-- <li class="active"><a href="http://info.doxter.de">Was ist doxter für Ärzte?</a></li> -->
+          <li><a href="#why-doxter">Wieso doxter?</a></li>
+          <li><a href="#how-does-it-work">Wie funktioniert doxter?</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+  
+  <div class="wrap " style="background-color:#0081b9">
+    <div class="container">
+      <div class="text-center" style="margin-top:90px;position:relative">
+        <h1 style="color:white">
+          Steigern Sie Ihren Praxiserfolg.
+        </h1>
+        <h2 style="color:white; line-height:40px">
+          doxter verbessert die Art und Weise wie Patienten Sie finden und Termine vereinbaren. doxter 
+        </h2>
+        <br/>
+        <a href="#pricing">
+          <button type="button" class="btn btn-lg btn-success" style="position:absolute;top:290px">120 € Fördermittel pro Arzt</button>
+        </a>
+        <br/>
+        <img src="http://assets.doxter.de/images/shared/doctor-success.png" style="padding-right:290px">
+        <!-- <img src="five-stars.png" style="position:absolute;top:534px;left:400px"> -->
+      </div>
+    </div>
+  </div>
+  
+    <div class="container" style="margin-top:50px">
+      
+      <div class="well" style="margin-bottom:70px">
+        <form class="form-inline">
+          <div class="form-group" style="width:25%">
+            <!-- <label for="exampleInputName2">Name</label> -->
+            <input type="text" class="form-control" id="exampleInputName2" placeholder="Name">
+            <span class="help-block text-left" id="helpBlock2">Praxis oder Arztnamen.</span>
+          </div>
+          <div class="form-group" style="width:25%">
+            <!-- <label for="exampleInputEmail2">Email</label> -->
+            <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Email">
+            <span class="help-block text-left" id="helpBlock2">Email für die Kontaktaufnahme.</span>
+          </div>
+          <div class="form-group" style="width:26%">
+            <!-- <label for="exampleInputEmail2">Email</label> -->
+            <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Handy / Durchwahl">
+            <span class="help-block text-left" id="helpBlock2">Tel. für das persönliche Gespräch.</span>
+          </div>
+          <button type="submit" style="margin:5px 5px 38px 3px" class="btn btn-success">Demo anfragen</button>
+        </form>        
+      </div>
+      
+      
+      
+      <div class="text-center" id="why-doxter">
+        <h1>Wieso nutzen über 3.000 Ärzte doxter?</h1>
+        <br/>
+        <br/>
+      </div>
+      
+      <div class="row">
+        <div class="col-md-6">
+          <h3>Patientenbindung</h3>
+          <p>
+            Stärken Sie die Patientenbindung mit dem komfortablen Onlineterminservice von doxter - von der Buchung und SMS-Erinnerungen bis hin zum Patientenfeedback.
+          </p>
+        </div>
+        <div class="col-md-6">
+          <h3>Praxisabläufe</h3>
+          <p>
+            Ihr doxter Profil wird an Ihre Bedürfnisse angepasst, Ihre Behandlungen, Ihre Terminregeln - Sie behalten die volle Kontrolle.
+          </p>
+        </div>
+      </div>
+      
+      <div class="row text-center" style="margin-top:30px">
+        <div class="col-md-3">
+          <h5>Top-Service</h5>
+          <p>
+            <img src="http://assets.doxter.de/images/shared/success.png" style="width:110px">
+          </p>
+          Patienten lieben Ihre Praxis für diesen innovativen Service.
+          </div>
+        <div class="col-md-3">
+          <h5>Termintreue steigern</h5>
+          <p>
+            <img src="http://assets.doxter.de/images/shared/improve-attendance.png">
+          </p>
+          doxter SMS-Erinnerungen steigern die Termintreue um 7 %.
+        </div>
+        <div class="col-md-3">
+          <h5>Privatpatienten / Selbstzahler</h5>
+          <p>
+            <img src="http://assets.doxter.de/images/shared/pkv.jpeg" style="width:120px">
+          </p>
+          14% der doxter Patienten sind privat versichert oder zahlen aus eigener Tasche.
+        </div>
+        <div class="col-md-3">
+          <h5>Telefon entlasten</h5>
+          <p>
+              <img src="http://assets.doxter.de/images/shared/online-telefon.jpg" style="width:140px">
+            </a>
+          </p>
+          Reduzieren Sie die Zahl von Terminanrufen um die Rezeption zu entlasten. 
+        </div>
+      </div>
+      
+      
+      
+      <div class="row" style="margin-top:30px">
+        <div class="col-md-6">
+          <h3>Erreichbarkeit</h3>
+          <!-- <h3>Maximieren Sie Ihre Erreichbarkeit</h3> -->
+          <p>
+            Mit doxter können Sie kurzfristig freiwerdende Termine durch Terminabsagen oder Terminverschiebungen einfach und schnell wiederbesetzen.
+          </p>
+        </div>
+        <div class="col-md-6">
+          <h3>Reputation</h3>
+          <!-- <h3>Stärken Sie Ihre Reputation</h3> -->
+          <p>
+            Verifizierte doxter Bewertungen bieten Schutz vor Manipulationen und anonymen Bewertungen.
+          </p>
+        </div>
+      </div>
+         <div class="row text-center" style="margin-top:30px">
+        <div class="col-md-3">
+           
+  
+        <h5>Suchanfragen</h5>
+          <p>
+            <img src="http://assets.doxter.de/images/shared/searches.png" style="width:100px">
+          </p>
+          Mehr als 1,4 Millionen Arztsuchen und 140.000 gebuchte Online-Termine pro Jahr sprechen für sich.
+        </div>
+        <div class="col-md-3">
+          <h5>24/7 Verfügbarkeit</h5>
+          <p>
+            <img src="http://assets.doxter.de/images/shared/booking-hours.png">
+          </p>
+          55% der doxter-Onlinetermine werden außerhalb der Sprechzeiten gebucht.
+        </div>
+        <div class="col-md-3">
+          <h5>Sammeln Sie mehr Feedback</h5>
+          <p>
+            <img src="http://assets.doxter.de/images/shared/avg-review.png" style="width:120px;margin-top:10px;margin-bottom:18px">
+          </p>
+          Die durchschnittliche Bewertung eines Arztes bei doxter ist 4.56 von 5 Sternen.
+        </div>
+        <div class="col-md-3">
+          <h5>Verifizierte Bewertungen</h5>
+          <p>
+            <img src="http://assets.doxter.de/images/shared/review-stars.png" style="width:120px;margin-top:10px;margin-bottom:18px">
+          </p>
+          Bei doxter können Sie nur bewertet werden wenn vorher ein Onlinetermin gebucht wurde.
+        </div>
+        
+        <div class="col-xs-12">
+          <!-- <a href="#pricing"> -->
+            <!-- <button type="button" class="btn btn-lg btn-success" style="margin-top:50px">Mit der TK ein Jahr kostenneutral testen.</button> -->
+            
+            <div class="well" style="margin-top:50px">
+              <form class="form-inline">
+                <div class="form-group" style="width:25%">
+                  <!-- <label for="exampleInputName2">Name</label> -->
+                  <input type="text" class="form-control" id="exampleInputName2" placeholder="Name">
+                  <span class="help-block text-left" id="helpBlock2">Praxis oder Arztnamen.</span>
+                </div>
+                <div class="form-group" style="width:25%">
+                  <!-- <label for="exampleInputEmail2">Email</label> -->
+                  <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Email">
+                  <span class="help-block text-left" id="helpBlock2">Email für die Kontaktaufnahme.</span>
+                </div>
+                <div class="form-group" style="width:26%">
+                  <!-- <label for="exampleInputEmail2">Email</label> -->
+                  <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Handy / Durchwahl">
+                  <span class="help-block text-left" id="helpBlock2">Tel. für das persönliche Gespräch.</span>
+                </div>
+                <button type="submit" style="margin:5px 5px 38px 3px" class="btn btn-success">Demo anfragen</button>
+              </form>        
+            </div>
+          <!-- </a> -->
+        </div>
+      </div>
+      
+      
+      
+      
+    </div>
+    <!-- marketing -->
+  
+  
+    <div class="wrap product" style="background-color:#e6f3f8;margin-top:50px;">
+      <div class="container" style="max-width:2500px">
+                
+        <div class="col-sm-6 col-lg-6" id="how-does-it-work">
+          <br/>
+          <br/>
+          <br/>
+          <img src="http://assets.doxter.de/images/shared/doxter-listing-2.png" style="border-bottom: 1px solid #ccc;padding: 50px 20px 0px 20px;width:100%;max-width:600px">
+        </div>
+          
+        <div class="col-sm-6 col-md-6 col-lg-6">
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+          <h1>So finden Patienten zu Ihnen.</h1>
+          <br/>
+          <p>
+            <h4 class="circle-title">Suchergebnisse</h4>
+            <div class="circle green left">
+              <span class="glyphicon glyphicon-calendar"></span>
+            </div>
+            <div class="circle-text">
+              Patienten finden und buchen bei Ihnen ob Desktop, Tablet oder Smartphone - doxter passt sich an jede Bildschirmgröße an.
+            </div>
+            <div class="clear"></div>
+          </p>
+          <p>
+            <h4 class="circle-title">24/7 Online-Buchung</h4>
+            <div class="circle blue left">
+              <span class="glyphicon glyphicon-search"></span>
+            </div>
+            <div class="circle-text">
+              Patienten buchen per SMS-TAN unkomplziert und sicher wie beim Online-Banking.
+            </div>
+            <div class="clear"></div>
+          </p>
+        </div>
+                
+        <div style="clear:both"></div>
+
+        <div class="col-md-6 text-right">
+          <br/>
+          <br/>
+          <h1>Ihr doxter Profil</h1>
+          <br/>
+          <p>
+            <h4 class="circle-title">Unbegrenzte Bilder</h4>
+            <div class="circle pink right">
+              <span class="glyphicon glyphicon-camera"></span>
+            </div>
+            <div class="circle-text">
+              Profilbilder und Praxisimpressionen machen Eindruck und ziehen Patienten an.
+            </div>
+          </p>
+          <br/>
+          <p>
+            <h4 class="circle-title">Angepasstes Profil</h4>
+            <div class="circle purple right">
+              <span class="glyphicon glyphicon-user"></span>
+            </div>
+            <div class="circle-text">
+              Ihre Spezialisierungen, Vita, Sprachen, Zertifikate und verfügbare Termine sind jederzeit durch Sie editierbar.
+            </div>
+          </p>
+          <br/>
+          <p>
+            <h4 class="circle-title">Mehrere Standorte</h4>
+            <div class="circle brown right">
+              <span class="glyphicon glyphicon-map-marker"></span>
+            </div>
+            <div class="circle-text">
+               Listen Sie verschiedene Standorte damit der Patient den Nächstliegenden auswählen kann.
+            </div>
+          </p>
+          <br/>
+          <p>
+            <h4 class="circle-title">Patientenbewertungen</h4>
+            <div class="circle yellow right">
+              <span class="glyphicon glyphicon-star"></span>                
+            </div>
+            <div class="circle-text">
+              Bauen Sie sich eine Online-Reputation auf und schützen Sie diese durch verifizierte Bewertungen.
+            </div>
+          </p>
+        </div>
+        
+        <div class="col-md-6">
+          <img src="http://assets.doxter.de/images/shared/doxter-profile.png" style="border-bottom: 1px solid #ccc;padding: 50px 20px 0px 20px;max-width:600px;width:100%" class="pull-right">
+        </div>
+        
+        <div class="row booking" style="margin-top:80px;width:70%;margin:0 auto">
+      
+          <div class="col-sm-12 text-center">
+            <br/>
+            <br/>
+            
+            <!-- <a href="#pricing"> -->
+              <!-- <button type="button" class="btn btn-lg btn-success" style="margin-top:50px;margin-bottom:30px">Mit der TK ein Jahr kostenneutral testen.</button> -->
+            <!-- </a> -->
+
+            <br/>
+            <br/>
+            <br/>
+            <h1>Der Buchungsprozess</h1>
+            <br/>
+            <br/>
+          </div>
+      
+          <div class="col-sm-4 text-center">
+            <img class="" src="http://assets.doxter.de/images/appointr/android-phone-booking.png">
+            
+            <h2 style="margin-top:25px">Kurze Eingabe</h2>
+            <p class="text-center">Im Gegensatz zu anderen Lösungen fragt doxter nur die wichtigsten Informationen ab, um unnötige Buchungsabbrüche zu verhindern.
+            </p>
+          </div><!-- /.col-lg-4 -->
+      
+          <div class="col-sm-4 text-center">
+            <img class="" src="http://assets.doxter.de/images/appointr/android-phone-sms.png">
+            <h2 style="margin-top:26px">Echte Nummer</h2>
+            <p>
+              Ein weiteres Alleinstellungsmerkmal ist die Verifizierung der Telefonnummer per smsTAN. Spaßbuchungen werden ausgeschlossen, die Erreichbarkeit ist sichergestellt.
+            </p>
+          </div><!-- /.col-lg-4 -->
+      
+          <div class="col-sm-4 text-center">
+            <img class="" src="http://assets.doxter.de/images/appointr/android-phone-msgs.png">
+            <h2 style="margin-top:30px">Wichtige Erinnerung</h2>
+            <p>doxter bestätigt und erinnert pünktlich an Terminzeit und -änderungen per SMS, so dass teure Terminausfälle reduziert werden. 
+            </p>
+          </div><!-- /.col-lg-4 -->
+        </div>
+        
+        <br/>
+
+      </div>
+      
+      
+
+      
+      
+
+
+
+      
+      
+    </div>
+  
+  
+  <div class="container">
+    
+    
+    <div class="text-center" style="margin-top:60px">
+      <!-- <span class="btn btn-lg btn-warning">
+        <a href="https://www.doxter.de/signup" style="color:#fff">
+          Sie haben noch Fragen?
+        </a>
+      </span> -->
+        
+        <div class="well" style="margin-bottom:70px">
+          <form class="form-inline">
+            <div class="form-group" style="width:25%">
+              <!-- <label for="exampleInputName2">Name</label> -->
+              <input type="text" class="form-control" id="exampleInputName2" placeholder="Name">
+              <span class="help-block text-left" id="helpBlock2">Praxis oder Arztnamen.</span>
+            </div>
+            <div class="form-group" style="width:25%">
+              <!-- <label for="exampleInputEmail2">Email</label> -->
+              <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Email">
+              <span class="help-block text-left" id="helpBlock2">Email für die Kontaktaufnahme.</span>
+            </div>
+            <div class="form-group" style="width:26%">
+              <!-- <label for="exampleInputEmail2">Email</label> -->
+              <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Handy / Durchwahl">
+              <span class="help-block text-left" id="helpBlock2">Tel. für das persönliche Gespräch.</span>
+            </div>
+            <button type="submit" style="margin:5px 5px 38px 3px" class="btn btn-success">Demo anfragen</button>
+          </form>        
+        </div>
+        
+    </div>
+  
+    <footer style="margin: 65px 0">
+      <hr>
+      <div class="row">
+        <div class="col-sm-3">
+          <h4>Amtsgericht</h4>
+          <span>
+            Berlin Charlottenburg <br>
+            USt-Id Nr. DE284613101 <br>
+            HRB 143394
+          </span>
+        </div>
+        <div class="col-sm-3">
+          <h4>Geschäftsführer</h4>
+          <span>
+            Dr. med. Ron Lehnert <br>
+          </span>
+        </div>
+        <div class="col-sm-2">
+          <h4>Über uns</h4>
+          <span>
+            <a href="http://info.doxter.de/team">Team</a><br>
+            <a href="http://blog.doxter.de/jobs">Jobs</a><br>
+          </span>
+          <a href="http://www.doxter.de/impressum" target="_blank">Impressum</a>
+        </div>
+        <div class="col-sm-3">
+          <h4>Folgen Sie uns</h4>
+          <a href="http://blog.doxter.de/" target="_blank"><span class="icon-comment"></span>Unser Blog</a><br>
+          <a href="https://twitter.com/doxter_de" target="_blank"><span class="icon-twitter"></span>Twitter</a><br>
+          <a href="https://www.facebook.com/doxter.de" target="_blank"><span class="icon-facebook"></span>Facebook</a>
+        </div>
+        <div class="col-sm-12" style="margin-top:15px">
+          © 2015 Doxter GmbH
+        </div>
+      </div>
+    </footer>
+
+  </div> 
+  <!-- /container -->
+
+
+  <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->                                                                                                                                                                                                                                              
+  </body>
+</html>
